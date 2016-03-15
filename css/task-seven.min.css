@@ -28,7 +28,7 @@ section{min-width:1280px;}
 .iadvant li img{margin-bottom:40px;}
 .iadvant li p{margin:0 auto;padding:0 80px;height:52px;border-right:1px solid #6C7773;color:#6C7773;font-size:14px;font-family:"黑体";}
 .iadvant li:last-child p{border-right:none;}
-.iadvant li .iadvant-icons{margin:0 auto;margin-bottom:40px;width: 46px;height:46px;background:url(../img/task-seven/bg-img.png);}
+.iadvant li .iadvant-icons{margin:0 auto;margin-bottom:40px;width: 46px;height:46px;background:url(../img/task-seven/bg-img.jpg);}
 .iadvant li:nth-child(1) .iadvant-icons{background-position:0 0;}
 .iadvant li:nth-child(2) .iadvant-icons{background-position:-55px 0;}
 .iadvant li:nth-child(3) .iadvant-icons{background-position:-110px 0;}

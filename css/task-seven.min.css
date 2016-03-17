@@ -112,7 +112,7 @@ section{min-width:1280px;}
 .ivolunt-top{padding:0 430px;padding-top:120px;padding-bottom:110px;text-align:center;}
 .ivolunt-top h5{color:#333;font-weight:600;font-size:21px;}
 .ivolunt-top p{margin-top:22px;color:#6C7773;font-size:13px;line-height:18px;}
-.ivolunt-bottom{padding-bottom:160px;padding-left:140px;}
+.ivolunt-bottom{padding-bottom:150px;padding-left:140px;}
 .ivolunt-bottom .left-container{float:left;width:290px;}
 .ivolunt-bottom .left-container li{margin-bottom:30px;}
 .ivolunt-bottom .left-container h5{color:#444;font-weight:500;font-size:14px;}
@@ -139,7 +139,7 @@ footer{min-width:1280px;font-family:"黑体";}
 .footer-top .contact button{float:left;width:80px;height:40px;outline:0;border:none;background:#655F63;color:#F7EEF1;text-align:center;font-size:16px;line-height:40px;cursor:pointer;}
 .footer-top .action{margin:0 auto;margin-top:30px;width:220px;}
 .footer-top .action li{float:left;width:25%;}
-.footer-top .action li a{margin:0 auto;margin-top:5px;display:block;width: 35px;height:35px;background:url(../img/task-seven/task-seven/bg-img.png);}
+.footer-top .action li a{margin:0 auto;margin-top:5px;display:block;width: 35px;height:35px;background: url(../img/task-seven/bg-img.jpg);}
 .footer-top .action li:nth-child(1) a{background-position:0 -55px;}
 .footer-top .action li:nth-child(2) a{background-position:-55px -55px;}
 .footer-top .action li:nth-child(3) a{background-position:-110px -55px;}
@@ -147,4 +147,3 @@ footer{min-width:1280px;font-family:"黑体";}
 .footer-bottom{height:75px;background:#303039;}
 .footer-bottom span{padding:0 40px;padding-top:30px;color:#EDEDED;font-size:12px;}
 .footer-bottom .totop{cursor:pointer;}
-

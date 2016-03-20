@@ -15,8 +15,8 @@ button { background: none; border: none; outline: none; }
 [class^=btn-] { text-align: center; outline: none; border: none; cursor: pointer; }
 .btn-primary { width: 50px; height: 26px; color: white; background: #378AC1; font-size: 12px; border-radius: 2px; }
 [class^=slt-] { font-size: 13px; font-family: "黑体"; appearance: none; -moz-appearance: none; -webkit-appearance: none;}
-.slt-down { padding-left: 5px; line-height: 20px; background: url(../img/slt-down.png) 90% center no-repeat; }
-.slt-caret { padding-left: 3px; line-height: 18px; background: url(../img/slt-down.png) 92% center no-repeat; }
+.slt-down { padding-left: 5px; line-height: 20px; background: url(../../img/task-nine/slt-down.png) 90% center no-repeat; }
+.slt-caret { padding-left: 3px; line-height: 18px; background: url(../../img/task-nine/slt-down.png) 92% center no-repeat; }
     
 #user { width: 100%; height: 55px; background-color: #2289BF; line-height: 55px; }
 #user img, #user input, #user a {display: block;}
@@ -79,7 +79,7 @@ button { background: none; border: none; outline: none; }
 .m-search-1 select { width: 70px; }
 .m-search-2 { margin-left: 20px; position: relative; float:left; width: 185px;}
 .m-search-2 select { width: 120px; }
-.m-search-2 a { position: absolute; right: 0; top: 5px;  width: 30px; height: 38px; background: url(../img/m-search-exchange.png) center center no-repeat;}
+.m-search-2 a { position: absolute; right: 0; top: 5px;  width: 30px; height: 38px; background: url(../../img/task-nine/m-search-exchange.png) center center no-repeat;}
 .m-search-3 { margin-left: 30px; float:left; width: 340px;}
 .m-search-3 label { margin-left: 10px;  }
 .m-search-3 .short { width: 70px; }
@@ -93,7 +93,7 @@ button { background: none; border: none; outline: none; }
 .m-history .list li h3 { font-weight: normal; font-size: 18px; color: #EC6602; }
 .m-history .list li h3 span { font-size: 15px; color: #ADACAC; }
 .m-history .query { float: right; width: 135px; height: 100%; font-size: 14px; color: #535454; line-height: 65px; background: white; outline: 1px solid #DCDADC; }
-.m-history .query span { padding-left: 60px; display: block; width: 135px; height: 100%; background: url(../img/history.png) 15px center no-repeat; }
+.m-history .query span { padding-left: 60px; display: block; width: 135px; height: 100%; background: url(../../img/task-nine/history.png) 15px center no-repeat; }
 .m-count { height: 95px; margin-top: 15px; }
 .m-count .title {}
 .m-count ul { width: 100%; }
@@ -140,7 +140,7 @@ button { background: none; border: none; outline: none; }
 .fm-project .form-group .left { width: 50%; border-right: 1px solid #DDDDDE; }
 .fm-project .form-group .right { width: 50%;}
 .fm-project .form-group .chk-ok { display: inline-block; width: 13px; height: 13px; background: #D5D5D6; cursor: pointer; appearance: none; -moz-appearance: none; -webkit-appearance: none;}
-.fm-project .form-group .chk-ok:checked { background: url('../img/checkbox.jpg') no-repeat;}
+.fm-project .form-group .chk-ok:checked { background: url('../../img/task-nine/checkbox.jpg') no-repeat;}
 .fm-project .form-group:nth-child(4) { float: left; margin-top: 8px;}
 .fm-project .form-group:nth-child(4) label { vertical-align: top; cursor: pointer; }
 .fm-project .btn-primary { margin-top: 8px; float: right; }

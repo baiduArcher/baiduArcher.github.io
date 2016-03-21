@@ -40,7 +40,7 @@ function removeItem(judge) {
 
 //判断字符串是否为数字,支持负数,浮点    
 function checkRate(inputValue) {
-	var check = /^-?[0-9]+.?[0-9]*$/;
+		var check = /^-?[0-9]+.?[0-9]*$/;
 	if (!check.test(inputValue)) {
 		alert("请输入数字");
 		document.getElementById("input").value = ""

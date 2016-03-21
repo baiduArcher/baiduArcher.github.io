@@ -57,7 +57,7 @@ var actionList = {
 	"left-enqueue": function() {
 		var inputValue = document.getElementById("input").value;
 		if (checkRate(inputValue)) {
-			drawItem(inputValue, "before")
+			drawItem(inputValue, "before");
 		}
 	},
 	//右侧入
@@ -87,5 +87,5 @@ document.body.addEventListener("click", function(event) {
 	var actionName = target.getAttribute('data-id')
 	var action = actionList[actionName];
 	action(target);
-	document.getElementById("input").value = ""
+	document.getElementById("input").value = "";
 }, false);

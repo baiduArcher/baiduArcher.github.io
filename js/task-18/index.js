@@ -79,7 +79,7 @@ var actionList = {
 	"item": function(target) {
 		removeItem("item", target);
 	}
-}
+};
 //click事件委托给body
 document.body.addEventListener("click", function(event) {
 	var target = event.target;

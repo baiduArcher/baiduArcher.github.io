@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Archers小组作业十八</title>
+		<style type="text/css">
+		#queueView{
+			overflow: hidden;
+			text-align: center;
+		}
+			.view-item{
+				display: block;
+				float: left;
+				height: 50px;
+				font-size: 18px;
+				line-height: 50px;
+				background-color: salmon;
+				font-family: "微软雅黑";
+				padding-left: 5px;
+				padding-right: 5px;
+				margin-top: 5px;
+				margin-right: 5px;
+				cursor: pointer;				
+			}
+		</style>
+</head>
+<body>
+<input type="text" id="input" data-id="input" value="请输入数字">
+<input type="button" data-id="left-enqueue" value="左侧入">
+<input type="button" data-id="right-enqueue" value="右侧入">
+<input type="button" data-id="left-dequeue" value="左侧出">
+<input type="button" data-id="right-dequeue" value="右侧出">
+<div id="queueView"></div>	
+	<script src="/js/task-18/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Archers小组作业十八</title>
+		<style type="text/css">
+			#queueView{
+				text-align: center;
+				height: 400px;
+				width: 1200px;
+			}
+				.view-item{
+					display: block;
+					float: left;
+					width: 5px;
+					font-size: 18px;
+					line-height: 50px;
+					background-color: #FA8072;
+					font-family: "微软雅黑";
+					padding-left: 5px;
+					padding-right: 5px;
+					margin-top: 5px;
+					margin-right: 5px;
+					cursor: pointer;				
+				}
+				.button{
+					display: inline-block;
+				}
+		</style>
+	</head>
+
+	<body>
+		<input type="text" id="input" data-id="input" value="">
+		<div class="button" id="button-container">
+			<input type="button" data-id="left-enqueue" value="左侧入">
+			<input type="button" data-id="right-enqueue" value="右侧入">
+			<input type="button" data-id="left-dequeue" value="左侧出">
+			<input type="button" data-id="right-dequeue" value="右侧出">
+			<input type="button" data-id="random" value="生成随机数">
+			<input type="button" data-id="sort" value="排序">
+
+		</div>
+		<div id="queueView"></div>
+		<script src="/js/task-19/task-19.js"></script>
+	</body>
+
+</html>

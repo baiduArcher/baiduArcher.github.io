@@ -12,6 +12,7 @@ var queue ={
 	actionList: {
 		//左侧入
 		"left-enqueue": function() {
+			if(queue.on===false) return
 			var inputValue = document.getElementById("input").value
 			if (queue.checkRate(inputValue)) {
 				queue.addItem["addBefore"](inputValue);
@@ -21,6 +22,7 @@ var queue ={
 		},
 		//右侧入
 		"right-enqueue": function() {
+			if(queue.on===false) return
 			var inputValue = document.getElementById("input").value;
 			if (queue.checkRate(inputValue)) {
 				queue.addItem["addLast"](inputValue);
@@ -29,17 +31,21 @@ var queue ={
 		},
 		//左侧出
 		"left-dequeue": function() {
+			if(queue.on===false) return
 			queue.removeItem["removeBefore"]();
 			queue.itemsQueue["deQueueBefore"]();
 		},
 		//右侧出
 		"right-dequeue": function() {
+			if(queue.on===false) return
 			queue.removeItem["removeLast"]();
 			queue.itemsQueue["deQueueLast"]();
 		},
 		"sort": function(){
-			queue.time = 1;
+
 			if(queue.on===true){
+							queue.time = 1;
+			queue.stopTime =1;
 				queue.on=false;
 			queue.itemsQueue["quickSort"](queue.itemsQueue.itemsArray,  0, queue.itemsQueue.itemsArray.length-1);	
 
@@ -47,6 +53,7 @@ var queue ={
 		},
 		random:function(){
 			if(queueView.childNodes.length===60){
+				if(queue.on===false) return
 
 				for(var time1 = 59; time1>=0; time1--){
 								queueView.removeChild(queueView.childNodes[time1]);
@@ -58,6 +65,7 @@ var queue ={
 				var randomValue = Math.floor(Math.random()*90+10);
 				queue.addItem["addLast"](randomValue);
 				queue.itemsQueue["enQueueLast"](randomValue);
+				
 			}			
 		}
 	},
@@ -77,6 +85,7 @@ var queue ={
 			return false
 		};
 		queueView.appendChild(queue.generateItem(number));
+
 		}
 	},
 	removeItem: {
@@ -144,7 +153,7 @@ var queue ={
 							j--;
 						}
 						if (i <= j) { //{14}
-							swapQuickStort(array, i, j,queue.setTime());
+							swapQuickStort(array, i, j);
 							i++;
 							j--;
 						}
@@ -152,11 +161,15 @@ var queue ={
 					return i; //{16}
 				};
 				//数组内 位置交换，以及item位置交换
-				var swapQuickStort = function(array, index1, index2,time){
+				var swapQuickStort = function(array, index1, index2){
 
 					var aux = array[index1];
 				    array[index1] = array[index2];
 				    array[index2] = aux;
+				    queue.time++;
+				     queue.stopTime++;
+				     
+				     
 					(function(array, index1, index2,time){
 						setTimeout(function timer(){
 					//先克隆两个要交换位置的item
@@ -164,9 +177,13 @@ var queue ={
 				    var cln1=queueView.childNodes[index2].cloneNode(true);	
 				    //删除旧item，插入新item
 				    queueView.replaceChild(cln1, queueView.childNodes[index1]);
-				    queueView.replaceChild(cln, queueView.childNodes[index2]);				    
+				    queueView.replaceChild(cln, queueView.childNodes[index2]);
+				    if(time===queue.stopTime){
+				    	queue.on= true;
+				    }
+				    console.log(queue.on);
 						},100*time)//100就是每次item交换位置的间隔时间，可以随便设
-					})(array, index1, index2,time)				    
+					})(array, index1, index2,queue.time)				    
 				};				
 		    	index = partition(array, left, right); //{3}	
 		    	//递归
@@ -191,16 +208,9 @@ var queue ={
 	document.getElementById("input").value = "";
 	},
 	//改变item时用到的setTimeOut的时间参数
-	time:1
-};
-queue.setTime = (function(){
-	//闭包使queue.time一直被引用，通过time++，使改变item时用到的setTimeOut函数的延时时间越来越长
-				return function(){
-					this.time++
-					console.log(this.time)
-					return this.time
-	}
-			})();
+	time:1,
+	stopTime:1
+};			
 queue.on = true;
 			
 //监听点击事件，委托给父元素

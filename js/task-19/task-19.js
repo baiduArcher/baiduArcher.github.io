@@ -15,6 +15,10 @@ var queue ={
 			if(queue.on===false) return
 			var inputValue = document.getElementById("input").value
 			if (queue.checkRate(inputValue)) {
+				if(queue.itemsQueue.itemsArray.length===60){
+				alert("已满60个");
+				return false
+				};
 				queue.addItem["addBefore"](inputValue);
 				queue.itemsQueue["enQueueBefore"](inputValue);
 				
@@ -25,6 +29,10 @@ var queue ={
 			if(queue.on===false) return
 			var inputValue = document.getElementById("input").value;
 			if (queue.checkRate(inputValue)) {
+				if(queue.itemsQueue.itemsArray.length===60){
+				alert("已满60个");
+				return false
+				};
 				queue.addItem["addLast"](inputValue);
 				queue.itemsQueue["enQueueLast"](inputValue);
 			}
@@ -72,18 +80,10 @@ var queue ={
 	addItem: {
 		//向前插入元素
 		addBefore: function(number) {
-		if(queue.itemsQueue.itemsArray.length===60){
-			alert("已满60个");
-			return false
-		};
 		queueView.insertBefore(queue.generateItem(number), queueView.firstChild);
 		},
 		//向后插入元素
 		addLast : function(number){
-					if(queue.itemsQueue.itemsArray.length===60){
-			alert("已满60个");
-			return false
-		};
 		queueView.appendChild(queue.generateItem(number));
 
 		}
@@ -220,3 +220,5 @@ var buttonContainer = document.getElementById("button-container");
 buttonContainer.addEventListener("click", function(event) {
 queue.actionClick();
 }, false);	
+
+
